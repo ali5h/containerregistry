@@ -30,7 +30,7 @@ py_library(
 
   # Used by oauth2client
   native.new_http_archive(
-      name = "six",
+      name = "six_archive",
       url = "https://pypi.python.org/packages/source/s/six/six-1.9.0.tar.gz",
       sha256 = "e24052411fc4fbd1f672635537c3fc2330d9481b18c0317695b46259512c91d5",
       strip_prefix = "six-1.9.0/",
@@ -64,7 +64,7 @@ py_library(
    visibility = ["//visibility:public"],
    deps = [
      "@httplib2//:httplib2",
-     "@six//:six",
+     "@six_archive//:six",
    ]
 )"""
   )
